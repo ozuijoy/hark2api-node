@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="data:,">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="theme-color" content="#20262b">
   <title>hark2api-node 控制台</title>
   <style>
     :root {
@@ -2704,11 +2705,22 @@
     @media (max-width: 700px) {
       .settings-row { padding: 20px 18px; }
     }
+
+    /* ── brand mark ── */
+    .brand { display: flex; align-items: center; gap: 9px; }
+    .brand-mark { display: block; width: 28px; height: 28px; flex: none; border-radius: 8px; }
+    .brand .brand-word { color: var(--ink-strong); font-style: normal; }
+    .brand .brand-suffix { margin-left: 1px; color: var(--muted); font-style: normal; font-size: 13px; font-weight: 400; letter-spacing: 0; }
+    @media (max-width: 560px) {
+      .brand { gap: 7px; }
+      .brand-mark { width: 22px; height: 22px; border-radius: 6px; }
+      .brand .brand-suffix { display: none; }
+    }
   </style>
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="/">HARK<span>2API</span></a>
+    <a class="brand" href="/"><img class="brand-mark" src="/favicon.svg" alt="" width="28" height="28"><span class="brand-word">hark<span>2api</span><span class="brand-suffix">-node</span></span></a>
   </header>
 
   <main class="shell">
