@@ -112,8 +112,10 @@ try {
   const indexText = await index.text();
   check('首頁回傳後台 HTML', index.status === 200 && indexText.includes('<html'), `status=${index.status}`);
 
-  const qr = await api('/docs/images/qq-group.png', { key: null });
-  check('docs 靜態圖可讀', qr.status === 200 && (qr.headers.get('content-type') || '').includes('image/png'));
+  check(
+    '首頁標題正確且無殘留素材引用',
+    indexText.includes('<title>hark2api-node 控制台</title>') && !indexText.includes('qq-group'),
+  );
 
   const noKey = await api('/v1/models', { key: null });
   const noKeyBody = await noKey.json();
