@@ -1560,26 +1560,6 @@
     }
     .brand { min-width: 0; }
     .brand small, .top-state, .auth-box { display: none; }
-    .top-links {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-left: auto;
-    }
-    .top-link {
-      border: 0;
-      border-bottom: 1px solid transparent;
-      padding: 5px 0;
-      color: var(--muted);
-      background: transparent;
-      font-size: 13px;
-      font-weight: 750;
-      text-decoration: none;
-    }
-    .top-link:hover {
-      border-bottom-color: var(--accent);
-      color: var(--accent-dark);
-    }
     .mobile-view-select { display: none; }
 
     @media (min-width: 1100px) {
@@ -1632,8 +1612,6 @@
         padding: 10px 16px;
       }
       .brand { font-size: 15px; }
-      .top-links { gap: 12px; }
-      .top-link { font-size: 12px; }
       .shell { width: calc(100% - 24px); padding: 18px 0 52px; }
       .tabs { margin-right: 0; }
       .settings-panel { padding: 18px; }
@@ -1957,18 +1935,6 @@
     .brand { min-width: 0; color: #f4f8f6; font-size: 16px; letter-spacing: .02em; }
     .brand span { color: #f08a6b; }
     .brand small, .top-state, .auth-box { display: none; }
-    .top-links { display: flex; align-items: center; gap: 18px; margin-left: auto; }
-    .top-link {
-      border: 0;
-      border-bottom: 1px solid transparent;
-      padding: 5px 0;
-      color: #b7c4c5;
-      background: transparent;
-      font-size: 12px;
-      font-weight: 700;
-      text-decoration: none;
-    }
-    .top-link:hover { border-bottom-color: #f08a6b; color: #ffffff; }
 
     .shell {
       display: grid;
@@ -2160,8 +2126,6 @@
 
     @media (max-width: 700px) {
       .topbar { min-height: 60px; padding: 0 16px; }
-      .top-links { gap: 11px; }
-      .top-link { font-size: 11px; }
       .shell { width: calc(100% - 24px); padding: 18px 0 52px; }
       .state-panel, .quick-panel, .workbench-form, .workbench-preview, .media-library-panel { padding: 16px; }
       .metric-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -2177,8 +2141,6 @@
     }
 
     @media (max-width: 520px) {
-      .top-links { gap: 8px; }
-      .top-link:last-child { font-size: 0; }
       .media-grid { column-count: 1; }
       .more-menu { min-width: 180px; }
     }
@@ -2294,34 +2256,8 @@
 
     .brand small, .top-state, .auth-box { display: none; }
 
-    .top-links {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-left: auto;
-    }
 
-    .top-link {
-      min-height: 38px;
-      border: 1px solid rgba(255, 255, 255, .48);
-      border-radius: 999px;
-      padding: 8px 14px;
-      color: var(--ink);
-      background: rgba(240, 248, 252, .3);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45);
-      backdrop-filter: blur(16px) saturate(120%);
-      font-size: 12px;
-      font-weight: 750;
-      text-decoration: none;
-      transition: background .2s ease, border-color .2s ease, transform .2s ease;
-    }
 
-    .top-link:hover {
-      border-color: rgba(255, 255, 255, .82);
-      color: var(--ink-strong);
-      background: rgba(255, 255, 255, .56);
-      transform: translateY(-1px);
-    }
 
     .shell {
       display: grid;
@@ -2617,7 +2553,7 @@
 
     @media (prefers-reduced-transparency: reduce) {
       body::before, body::after { display: none !important; }
-      .top-link, .tabs, .panel, .button, .notice, dialog { backdrop-filter: none; }
+      .tabs, .panel, .button, .notice, dialog { backdrop-filter: none; }
       .tabs { background: #c5deea; }
       .panel, dialog { background: #f5fafc; }
       .button { background: #eaf3f7; }
@@ -2668,8 +2604,6 @@
     @media (max-width: 700px) {
       .topbar { min-height: 72px; padding: 14px 16px; }
       .brand { font-size: 18px; }
-      .top-links { gap: 6px; }
-      .top-link { min-height: 36px; padding: 8px 11px; font-size: 11px; }
       .shell { width: calc(100% - 24px); padding: 4px 0 52px; }
       .state-panel, .quick-panel, .workbench-form, .workbench-preview, .media-library-panel { padding: 14px; }
       .metric-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -2686,13 +2620,12 @@
     }
 
     @media (max-width: 520px) {
-      .top-link:last-child { font-size: 0; }
       .media-grid { column-count: 1; }
       .more-menu { min-width: 186px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .button, .tab, .top-link, .meter-fill { transition: none; }
+      .button, .tab, .meter-fill { transition: none; }
       .notice.show { animation: none; }
       .progress-indicator::after { animation: none; }
     }
