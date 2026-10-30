@@ -44,6 +44,9 @@ Client ──► Worker  src/index.js
 | `src/errors.js` | `ApiError` + OpenAI 錯誤格式 |
 | `src/config.js` | 環境變數 → 設定 |
 | `public/index.html` | 控制台（單檔，無建置） |
+| `public/favicon.svg` | 標記原始檔，分頁圖示與 topbar 共用同一份 |
+| `public/favicon.ico` `public/apple-touch-icon.png` | 由 SVG 產生的光柵版（舊瀏覽器、iOS 主畫面） |
+| `tools/build-icons.sh` | 重新產生上面兩個檔（需 `rsvg-convert` + ImageMagick） |
 | `tools/mock-hark.mjs` | 本地假上游，測試用 |
 | `test/e2e.mjs` | 端到端測試 |
 
@@ -119,6 +122,8 @@ curl https://<worker>.workers.dev/v1/images/generations \
 npm test        # 起 workerd + tools/mock-hark.mjs，端到端跑 38 項，不需要真 cookie
 npm run dev     # 本地 Worker；上游仍是真 hark.com，cookie 放 .dev.vars
 ```
+
+改了 `favicon.svg` 之後：`./tools/build-icons.sh` 會重新產生 `.ico`（16/32/48）與 180×180 的 iOS 圖示（鋪滿底色，因為 iOS 自己會套圓角遮罩）。
 
 `npm test` 會覆蓋：OpenAI 端點（含 SSE 串流）、`url` / `b64_json` 兩種回傳、背景任務走真實 alarm、`Idempotency-Key`（重複 → 同任務，內容不同 → 409）、multipart 編輯（同步＋非同步）、媒體位元組完全一致、帳號 CRUD／測試／額度／匯出、任務與媒體清理。
 
