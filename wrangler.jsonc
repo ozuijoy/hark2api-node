@@ -1,0 +1,33 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hark2api-node",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-29",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "CORE", "class_name": "Core" },
+      { "name": "RUNNER", "class_name": "Runner" },
+      { "name": "TASK", "class_name": "Task" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["Core", "Runner", "Task"] }
+  ],
+  "observability": { "enabled": true },
+  "vars": {
+    "HARK2API_UPSTREAM": "https://hark.com",
+    "HARK2API_CHAT_TIMEOUT": "300",
+    "HARK2API_REQUEST_TIMEOUT": "30",
+    "HARK2API_POLL_INTERVAL": "1",
+    "HARK2API_SETTLE_SECONDS": "1.5",
+    "HARK2API_TASK_QUEUE_LIMIT": "8",
+    "HARK2API_MAX_MEDIA_BYTES": "20971520",
+    "HARK2API_TIMEZONE": "Asia/Shanghai",
+    "HARK2API_LOCALE": "zh-CN",
+    "HARK2API_PUBLIC_BASE": ""
+  }
+}

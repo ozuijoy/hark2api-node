@@ -1,0 +1,37 @@
+{
+  "name": "hark2api-node",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Self-hosted OpenAI-compatible gateway for Hark image generation, running on Cloudflare Workers with Durable Objects.",
+  "keywords": [
+    "cloudflare-workers",
+    "durable-objects",
+    "openai-compatible",
+    "image-generation",
+    "hark",
+    "api-gateway"
+  ],
+  "homepage": "https://github.com/ozuijoy/hark2api-node#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozuijoy/hark2api-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ozuijoy/hark2api-node/issues"
+  },
+  "author": "ozuijoy",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "test": "node test/e2e.mjs",
+    "deploy": "wrangler deploy",
+    "dry-run": "wrangler deploy --dry-run",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.40.0"
+  }
+}
