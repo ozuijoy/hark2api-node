@@ -95,8 +95,8 @@ function previousMonth(parts) {
 }
 
 /** 把 Hark 的 billing meters 整形成帳號頁用的額度資料 */
-export function parseBillingSummary(payload, timezone = 'Asia/Shanghai', now = new Date()) {
-  let timezoneName = timezone || 'Asia/Shanghai';
+export function parseBillingSummary(payload, timezone = 'Asia/Taipei', now = new Date()) {
+  let timezoneName = timezone || 'Asia/Taipei';
   try {
     formatterFor(timezoneName);
   } catch {

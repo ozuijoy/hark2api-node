@@ -7,8 +7,8 @@ const DEFAULTS = {
   settleSeconds: 1.5,
   taskQueueLimit: 8,
   maxMediaBytes: 20 * 1024 * 1024,
-  timezone: 'Asia/Shanghai',
-  locale: 'zh-CN',
+  timezone: 'Asia/Taipei',
+  locale: 'zh-TW',
   userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36',
 };
 

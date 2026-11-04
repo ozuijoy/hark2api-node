@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-TW">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,7 +39,7 @@
       color: var(--ink);
       background: var(--bg);
       font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        "PingFang TC", "Hiragino Sans TC", "Microsoft JhengHei", sans-serif;
       font-size: 14px;
       line-height: 1.45;
     }
@@ -502,7 +502,7 @@
       color: var(--ink);
       background: var(--bg);
       font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        "PingFang TC", "Hiragino Sans TC", "Microsoft JhengHei", sans-serif;
       font-size: 14px;
       line-height: 1.5;
     }
@@ -953,7 +953,7 @@
       display: block;
       margin: 1px 12px 14px;
       color: #82959e;
-      content: "工作区";
+      content: "工作區";
       font-size: 11px;
       font-weight: 750;
       letter-spacing: .12em;
@@ -1186,7 +1186,7 @@
     body {
       background-color: var(--bg);
       color: var(--ink);
-      font-family: "Avenir Next", "Segoe UI Variable", "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-family: "Avenir Next", "Segoe UI Variable", "PingFang TC", "Microsoft JhengHei", sans-serif;
       font-size: 14px;
       line-height: 1.5;
     }
@@ -1919,7 +1919,7 @@
     body {
       color: var(--ink);
       font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        "PingFang TC", "Hiragino Sans TC", "Microsoft JhengHei", sans-serif;
       letter-spacing: 0;
     }
     body::before, .state-panel::after, .quick-panel::after { display: none !important; }
@@ -2201,7 +2201,7 @@
         linear-gradient(180deg, rgba(48, 91, 142, .2) 0%, rgba(113, 161, 202, .08) 45%, rgba(220, 233, 235, .42) 100%),
         linear-gradient(116deg, var(--sky-deep) 0%, #77a3ca 42%, var(--sky-light) 100%);
       font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        "PingFang TC", "Hiragino Sans TC", "Microsoft JhengHei", sans-serif;
       letter-spacing: 0;
     }
 
@@ -2726,65 +2726,65 @@
   </header>
 
   <main class="shell">
-    <nav class="tabs" aria-label="控制台导航">
-      <button class="tab active" type="button" data-view="overview">总览</button>
+    <nav class="tabs" aria-label="控制台導航">
+      <button class="tab active" type="button" data-view="overview">總覽</button>
       <button class="tab" type="button" data-view="run">工作台</button>
-      <button class="tab" type="button" data-view="accounts">账号</button>
-      <button class="tab" type="button" data-view="tasks">任务</button>
-      <button class="tab" type="button" data-view="media">媒体</button>
-      <button class="tab" type="button" data-view="settings">设置</button>
-      <select id="viewSelect" class="mobile-view-select" aria-label="选择控制台页面">
-        <option value="overview">总览</option>
+      <button class="tab" type="button" data-view="accounts">帳號</button>
+      <button class="tab" type="button" data-view="tasks">任務</button>
+      <button class="tab" type="button" data-view="media">媒體</button>
+      <button class="tab" type="button" data-view="settings">設定</button>
+      <select id="viewSelect" class="mobile-view-select" aria-label="選擇控制台頁面">
+        <option value="overview">總覽</option>
         <option value="run">工作台</option>
-        <option value="accounts">账号</option>
-        <option value="tasks">任务</option>
-        <option value="media">媒体</option>
-        <option value="settings">设置</option>
+        <option value="accounts">帳號</option>
+        <option value="tasks">任務</option>
+        <option value="media">媒體</option>
+        <option value="settings">設定</option>
       </select>
     </nav>
 
-    <div id="notice" class="notice" role="status"><span id="noticeText"></span><button id="closeNotice" type="button" aria-label="关闭">关闭</button></div>
+    <div id="notice" class="notice" role="status"><span id="noticeText"></span><button id="closeNotice" type="button" aria-label="關閉">關閉</button></div>
 
     <section id="view-overview" class="view active">
       <div class="overview-grid">
         <section class="panel state-panel">
           <div class="state-top">
             <div>
-              <div class="state-title"><span id="overviewDot" class="status-dot"></span><h2>运行状态</h2></div>
+              <div class="state-title"><span id="overviewDot" class="status-dot"></span><h2>執行狀態</h2></div>
             </div>
-            <button id="refreshAll" class="button small" type="button">刷新</button>
+            <button id="refreshAll" class="button small" type="button">重新整理</button>
           </div>
           <table class="state-table">
             <tbody>
               <tr><th>上游</th><td id="upstreamState" class="mono">--</td></tr>
-              <tr><th>Hark 账号</th><td id="cookieState">读取中</td></tr>
+              <tr><th>Hark 帳號</th><td id="cookieState">讀取中</td></tr>
               <tr><th>API Key</th><td id="keyState">--</td></tr>
-              <tr><th>媒体存储</th><td id="mediaState">读取中</td></tr>
+              <tr><th>媒體儲存</th><td id="mediaState">讀取中</td></tr>
             </tbody>
           </table>
         </section>
 
         <section class="panel quick-panel">
           <h2>常用操作</h2>
-          <button class="button primary block" type="button" data-go="run">打开工作台</button>
-          <button class="button block" type="button" data-go="accounts">管理账号</button>
-          <button class="button block" type="button" data-go="media">查看媒体文件</button>
+          <button class="button primary block" type="button" data-go="run">開啟工作台</button>
+          <button class="button block" type="button" data-go="accounts">管理帳號</button>
+          <button class="button block" type="button" data-go="media">檢視媒體檔案</button>
         </section>
       </div>
 
-      <div class="panel metric-strip" aria-label="关键指标">
-        <div class="metric"><span class="metric-label">账号总数</span><strong id="metricAccounts">--</strong><small id="metricAccountsMeta">--</small></div>
-        <div class="metric"><span class="metric-label">健康账号</span><strong id="metricHealthy">--</strong><small id="metricHealthyMeta">认证状态</small></div>
-        <div class="metric"><span class="metric-label">任务记录</span><strong id="metricTasks">--</strong><small id="metricTasksMeta">最近 50 条</small></div>
-        <div class="metric"><span class="metric-label">媒体文件</span><strong id="metricMedia">--</strong><small id="metricMediaMeta">--</small></div>
+      <div class="panel metric-strip" aria-label="關鍵指標">
+        <div class="metric"><span class="metric-label">帳號總數</span><strong id="metricAccounts">--</strong><small id="metricAccountsMeta">--</small></div>
+        <div class="metric"><span class="metric-label">健康帳號</span><strong id="metricHealthy">--</strong><small id="metricHealthyMeta">認證狀態</small></div>
+        <div class="metric"><span class="metric-label">任務記錄</span><strong id="metricTasks">--</strong><small id="metricTasksMeta">最近 50 條</small></div>
+        <div class="metric"><span class="metric-label">媒體檔案</span><strong id="metricMedia">--</strong><small id="metricMediaMeta">--</small></div>
       </div>
 
       <section class="panel panel-pad overview-bottom">
         <div class="section-head">
-          <div><h2>最近任务</h2></div>
-          <button class="button small" type="button" data-go="tasks">查看全部</button>
+          <div><h2>最近任務</h2></div>
+          <button class="button small" type="button" data-go="tasks">檢視全部</button>
         </div>
-        <div id="recentTasks" class="table-wrap"><div class="empty loading">读取中</div></div>
+        <div id="recentTasks" class="table-wrap"><div class="empty loading">讀取中</div></div>
       </section>
     </section>
 
@@ -2792,65 +2792,65 @@
       <div class="section-head">
         <div class="section-actions account-section-actions">
           <input id="importAccountsFile" type="file" accept="application/json,.json" hidden>
-          <button id="importAccounts" class="button small" type="button" title="逐个验证并导入账号 JSON">导入 JSON</button>
-          <button id="exportAccounts" class="button small" type="button" title="导出账号 JSON，文件包含 Cookie / ST">导出 JSON</button>
-          <button id="refreshAccounts" class="button small" type="button">刷新</button>
-          <button id="addAccount" class="button primary small" type="button">添加账号</button>
+          <button id="importAccounts" class="button small" type="button" title="逐個驗證並匯入帳號 JSON">匯入 JSON</button>
+          <button id="exportAccounts" class="button small" type="button" title="匯出帳號 JSON，檔案包含 Cookie / ST">匯出 JSON</button>
+          <button id="refreshAccounts" class="button small" type="button">重新整理</button>
+          <button id="addAccount" class="button primary small" type="button">新增帳號</button>
         </div>
       </div>
       <section class="panel account-panel">
         <div id="accountBulkBar" class="account-bulkbar" hidden>
-          <span class="account-bulk-label">已选择 <strong id="selectedAccountCount">0</strong> 个账号</span>
-          <button class="button small" type="button" data-bulk-action="enable">启用</button>
-          <button class="button small" type="button" data-bulk-action="disable">禁用</button>
-          <button class="button danger small" type="button" data-bulk-action="delete">删除</button>
-          <button class="button small" type="button" data-bulk-action="clear">取消选择</button>
+          <span class="account-bulk-label">已選擇 <strong id="selectedAccountCount">0</strong> 個帳號</span>
+          <button class="button small" type="button" data-bulk-action="enable">啟用</button>
+          <button class="button small" type="button" data-bulk-action="disable">停用</button>
+          <button class="button danger small" type="button" data-bulk-action="delete">刪除</button>
+          <button class="button small" type="button" data-bulk-action="clear">取消選擇</button>
         </div>
-        <div id="accountTable" class="table-wrap"><div class="empty loading">读取中</div></div>
+        <div id="accountTable" class="table-wrap"><div class="empty loading">讀取中</div></div>
       </section>
     </section>
 
     <section id="view-tasks" class="view">
       <div class="section-head">
-        <div class="section-actions"><button id="refreshTasks" class="button small" type="button">刷新</button><button id="clearTasks" class="button danger small" type="button">清理已结束任务</button></div>
+        <div class="section-actions"><button id="refreshTasks" class="button small" type="button">重新整理</button><button id="clearTasks" class="button danger small" type="button">清理已結束任務</button></div>
       </div>
       <section class="panel">
-        <div id="taskTable" class="table-wrap"><div class="empty loading">读取中</div></div>
+        <div id="taskTable" class="table-wrap"><div class="empty loading">讀取中</div></div>
       </section>
     </section>
 
     <section id="view-media" class="view">
       <div class="section-head">
-        <div class="section-actions"><button id="refreshMedia" class="button small" type="button">刷新</button></div>
+        <div class="section-actions"><button id="refreshMedia" class="button small" type="button">重新整理</button></div>
       </div>
-      <section class="panel media-library-panel"><div id="mediaGrid" class="media-grid"><div class="empty loading">读取中</div></div></section>
+      <section class="panel media-library-panel"><div id="mediaGrid" class="media-grid"><div class="empty loading">讀取中</div></div></section>
     </section>
 
     <section id="view-run" class="view">
       <div id="workbenchEmpty" class="workbench-empty" hidden>
         <div>
-          <h2>先添加一个 Hark 账号</h2>
-          <p>工作台需要使用已登录的账号调用 Hark。</p>
-          <button class="button primary" type="button" data-go="accounts">去添加账号</button>
+          <h2>先新增一個 Hark 帳號</h2>
+          <p>工作台需要使用已登入的帳號呼叫 Hark。</p>
+          <button class="button primary" type="button" data-go="accounts">去新增帳號</button>
         </div>
       </div>
       <div id="workbenchLayout" class="workbench-layout">
         <form id="generationForm" class="panel workbench-form">
           <div id="promptComposer" class="prompt-composer">
             <div id="stylePromptBlock" class="style-prompt-block" hidden>
-              <div class="style-prompt-head"><span>提取的风格</span><button id="clearStylePrompt" class="style-prompt-clear" type="button">移除</button></div>
+              <div class="style-prompt-head"><span>提取的風格</span><button id="clearStylePrompt" class="style-prompt-clear" type="button">移除</button></div>
               <div id="stylePromptText" class="style-prompt-text"></div>
             </div>
-            <textarea id="generationPrompt" required aria-label="生成提示词" placeholder="描述你想看到的画面"></textarea>
+            <textarea id="generationPrompt" required aria-label="生成提示詞" placeholder="描述你想看到的畫面"></textarea>
             <div id="referencePreviewWrap" class="reference-preview-wrap" hidden>
-              <img id="referencePreview" class="reference-thumb" alt="参考图预览">
+              <img id="referencePreview" class="reference-thumb" alt="參考圖預覽">
               <span id="referenceFileName" class="reference-file-name"></span>
               <button id="removeReference" class="reference-remove" type="button">移除</button>
             </div>
             <div class="prompt-toolbar">
               <div class="prompt-tools">
-                <button id="chooseReference" class="tool-button" type="button"><span aria-hidden="true">＋</span>添加参考图</button>
-                <button id="extractStyle" class="tool-button" type="button" disabled><span aria-hidden="true">✦</span>提取风格</button>
+                <button id="chooseReference" class="tool-button" type="button"><span aria-hidden="true">＋</span>新增參考圖</button>
+                <button id="extractStyle" class="tool-button" type="button" disabled><span aria-hidden="true">✦</span>提取風格</button>
               </div>
               <button class="button primary" type="submit">生成</button>
             </div>
@@ -2859,10 +2859,10 @@
         </form>
         <section class="panel workbench-preview" aria-live="polite">
           <div class="preview-head"><span id="runStatus" class="badge">等待生成</span></div>
-          <div id="runResult" class="result-status empty-state">生成结果会显示在这里</div>
+          <div id="runResult" class="result-status empty-state">生成結果會顯示在這裡</div>
           <div id="runActions" class="result-actions" hidden>
-            <button class="button small" type="button" data-go="tasks">查看任务</button>
-            <button class="button small" type="button" data-go="media">打开媒体</button>
+            <button class="button small" type="button" data-go="tasks">檢視任務</button>
+            <button class="button small" type="button" data-go="media">開啟媒體</button>
           </div>
           <div id="workbenchQuota" class="workbench-quota" aria-live="polite"></div>
         </section>
@@ -2874,19 +2874,19 @@
         <section class="settings-row">
           <div><h2>API Key</h2></div>
           <div class="settings-control settings-key-control">
-            <div class="field"><label for="apiKey">当前会话 API Key</label><input id="apiKey" type="password" autocomplete="off" placeholder="未设置时留空"></div>
-            <div class="settings-actions"><button id="saveKey" class="button primary" type="button">保存设置</button></div>
+            <div class="field"><label for="apiKey">目前工作階段 API Key</label><input id="apiKey" type="password" autocomplete="off" placeholder="未設定時留空"></div>
+            <div class="settings-actions"><button id="saveKey" class="button primary" type="button">儲存設定</button></div>
           </div>
         </section>
         <section class="settings-row">
-          <div><h2>清理媒体</h2></div>
+          <div><h2>清理媒體</h2></div>
           <div class="settings-control settings-cleanup-control">
             <form id="cleanupForm">
               <div class="cleanup-controls">
-                <div class="field"><label for="cleanupAge">保留天数</label><input id="cleanupAge" type="number" min="1" value="7" required></div>
-                <label class="check-line"><input id="cleanupDryRun" type="checkbox" checked> 仅预览，不删除</label>
+                <div class="field"><label for="cleanupAge">保留天數</label><input id="cleanupAge" type="number" min="1" value="7" required></div>
+                <label class="check-line"><input id="cleanupDryRun" type="checkbox" checked> 僅預覽，不刪除</label>
               </div>
-              <button class="button" type="submit">执行清理</button>
+              <button class="button" type="submit">執行清理</button>
             </form>
             <div id="cleanupResult" class="help cleanup-result" aria-live="polite"></div>
           </div>
@@ -2897,10 +2897,10 @@
 
   <dialog id="accountDialog">
     <form id="accountForm" method="dialog" class="dialog-body">
-      <div class="dialog-head"><div><h2 id="dialogTitle">添加账号</h2></div><button id="closeAccountDialog" type="button" aria-label="关闭">×</button></div>
-      <div id="dialogLabelField" class="field"><label for="dialogLabel">标签</label><input id="dialogLabel" maxlength="80" placeholder="例如：主账号"></div>
-      <div id="dialogCookieField" class="field"><label for="dialogCookie">Cookie / ST</label><textarea id="dialogCookie" required placeholder="粘贴完整 Cookie，或仅粘贴 session token"></textarea><div class="help">支持完整 Cookie，也支持只粘贴 __Secure-hark.session_token 的值。保存时会读取账号邮箱并同步额度；如果无法读取个人资料，账号不会添加。</div></div>
-      <div class="dialog-actions"><button id="cancelAccountDialog" class="button" type="button">取消</button><button class="button primary" type="submit">保存</button></div>
+      <div class="dialog-head"><div><h2 id="dialogTitle">新增帳號</h2></div><button id="closeAccountDialog" type="button" aria-label="關閉">×</button></div>
+      <div id="dialogLabelField" class="field"><label for="dialogLabel">標籤</label><input id="dialogLabel" maxlength="80" placeholder="例如：主帳號"></div>
+      <div id="dialogCookieField" class="field"><label for="dialogCookie">Cookie / ST</label><textarea id="dialogCookie" required placeholder="貼上完整 Cookie，或僅貼上 session token"></textarea><div class="help">支援完整 Cookie，也支援只貼上 __Secure-hark.session_token 的值。儲存時會讀取帳號信箱並同步額度；如果無法讀取個人資料，帳號不會新增。</div></div>
+      <div class="dialog-actions"><button id="cancelAccountDialog" class="button" type="button">取消</button><button class="button primary" type="submit">儲存</button></div>
     </form>
   </dialog>
 
@@ -2941,7 +2941,7 @@
       try { data = text ? JSON.parse(text) : null; } catch (_) { data = text; }
       if (!response.ok) {
         if (response.status === 401) setHealth('需要 API Key', 'warn');
-        throw new Error(data?.detail || data?.error?.message || `请求失败（HTTP ${response.status}）`);
+        throw new Error(data?.detail || data?.error?.message || `請求失敗（HTTP ${response.status}）`);
       }
       return data;
     }
@@ -2979,7 +2979,7 @@
 
     function formatTime(value) {
       if (!value) return '--';
-      return new Date(Number(value) * 1000).toLocaleString('zh-CN', {
+      return new Date(Number(value) * 1000).toLocaleString('zh-TW', {
         month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit'
       });
     }
@@ -2995,15 +2995,15 @@
     function statusBadge(status) {
       const value = String(status || 'unknown');
       const tone = value === 'completed' ? 'good' : (value === 'failed' ? 'bad' : (value === 'processing' ? 'warn' : ''));
-      const labels = { queued: '排队中', processing: '处理中', completed: '已完成', failed: '失败' };
+      const labels = { queued: '排隊中', processing: '處理中', completed: '已完成', failed: '失敗' };
       return `<span class="badge ${tone}">${escapeHtml(labels[value] || value)}</span>`;
     }
 
     function accountState(account) {
-      if (!account.enabled) return ['已禁用', ''];
-      if (account.ok === false) return ['认证失败', 'bad'];
+      if (!account.enabled) return ['已停用', ''];
+      if (account.ok === false) return ['認證失敗', 'bad'];
       if (account.ok === true) return ['正常', 'good'];
-      return ['待验证', 'warn'];
+      return ['待驗證', 'warn'];
     }
 
     function setText(selector, value) { $(selector).textContent = value == null ? '--' : value; }
@@ -3012,15 +3012,15 @@
       state.status = data;
       const accounts = data.accounts || {};
       const media = data.media || {};
-      setHealth('服务在线', 'good');
+      setHealth('服務上線', 'good');
       setText('#upstreamState', data.upstream || '--');
       setText('#cookieState', data.cookie_configured ? '已配置' : '未配置');
-      setText('#keyState', data.api_key_enabled ? '已启用' : '未启用');
-      setText('#mediaState', `${media.count || 0} 个文件，${formatBytes(media.bytes)}`);
+      setText('#keyState', data.api_key_enabled ? '已啟用' : '未啟用');
+      setText('#mediaState', `${media.count || 0} 個檔案，${formatBytes(media.bytes)}`);
       setText('#metricAccounts', accounts.total || 0);
-      setText('#metricAccountsMeta', `${accounts.enabled || 0} 个启用`);
+      setText('#metricAccountsMeta', `${accounts.enabled || 0} 個啟用`);
       setText('#metricHealthy', accounts.healthy || 0);
-      setText('#metricHealthyMeta', `${accounts.error || 0} 个需检查`);
+      setText('#metricHealthyMeta', `${accounts.error || 0} 個需檢查`);
       setText('#metricMedia', media.count || 0);
       setText('#metricMediaMeta', formatBytes(media.bytes));
     }
@@ -3028,15 +3028,15 @@
     function renderRecentTasks() {
       const recent = state.tasks.slice(0, 5);
       const rows = recent.map((task) => `<tr><td class="mono">${escapeHtml(task.id)}</td><td>${statusBadge(task.status)}</td><td>${escapeHtml(task.prompt || '')}</td><td class="sub-cell">${formatTime(task.created_at)}</td></tr>`).join('');
-      $('#recentTasks').innerHTML = recent.length ? `<table><thead><tr><th>任务</th><th>状态</th><th>提示词</th><th>创建时间</th></tr></thead><tbody>${rows}</tbody></table>` : '<div class="empty">暂无任务记录。</div>';
+      $('#recentTasks').innerHTML = recent.length ? `<table><thead><tr><th>任務</th><th>狀態</th><th>提示詞</th><th>建立時間</th></tr></thead><tbody>${rows}</tbody></table>` : '<div class="empty">暫無任務記錄。</div>';
     }
 
     function renderMedia() {
       const items = state.media.map((item) => {
         const preview = item.kind === 'image' ? `<img loading="lazy" src="${escapeHtml(item.url)}" alt="${escapeHtml(item.name)}">` : `<span class="file-preview">${escapeHtml(item.media_type || 'file')}</span>`;
-        return `<article class="media-item"><div class="media-preview">${preview}</div><div class="media-meta"><div class="media-name" title="${escapeHtml(item.name)}">${escapeHtml(item.name)}</div><div class="media-detail"><span>${formatBytes(item.bytes)}</span><span>${formatTime(item.mtime)}</span></div><div class="media-actions"><a class="button small" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">打开</a><button class="button danger small" data-media-action="delete" data-name="${escapeHtml(item.name)}">删除</button></div></div></article>`;
+        return `<article class="media-item"><div class="media-preview">${preview}</div><div class="media-meta"><div class="media-name" title="${escapeHtml(item.name)}">${escapeHtml(item.name)}</div><div class="media-detail"><span>${formatBytes(item.bytes)}</span><span>${formatTime(item.mtime)}</span></div><div class="media-actions"><a class="button small" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">開啟</a><button class="button danger small" data-media-action="delete" data-name="${escapeHtml(item.name)}">刪除</button></div></div></article>`;
       }).join('');
-      $('#mediaGrid').innerHTML = state.media.length ? items : '<div class="empty">暂无媒体文件。</div>';
+      $('#mediaGrid').innerHTML = state.media.length ? items : '<div class="empty">暫無媒體檔案。</div>';
     }
 
     function percentValue(value) {
@@ -3047,7 +3047,7 @@
     function formatResetTime(value) {
       const date = new Date(value);
       if (Number.isNaN(date.getTime())) return '--';
-      return date.toLocaleString('zh-CN', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+      return date.toLocaleString('zh-TW', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' });
     }
 
     function formatPlan(value) {
@@ -3059,8 +3059,8 @@
     function renderPlan(account) {
       const usage = account.usage;
       if (!usage) return '<span class="quota-muted">--</span>';
-      if (usage.status === 'loading') return '<span class="quota-muted">获取中...</span>';
-      if (usage.status === 'error') return '<span class="quota-error">失败</span>';
+      if (usage.status === 'loading') return '<span class="quota-muted">取得中...</span>';
+      if (usage.status === 'error') return '<span class="quota-error">失敗</span>';
       if (usage.status !== 'ready') return '<span class="quota-muted">--</span>';
       return '<span class="plan-value">' + escapeHtml(formatPlan(usage.plan)) + '</span>';
     }
@@ -3068,17 +3068,17 @@
     function renderUpdatedAt(account) {
       const usage = account.usage;
       if (!usage) return '<span class="quota-muted">--</span>';
-      if (usage.status === 'loading') return '<span class="quota-muted">获取中...</span>';
-      if (usage.status === 'error') return '<span class="quota-error">失败</span>';
+      if (usage.status === 'loading') return '<span class="quota-muted">取得中...</span>';
+      if (usage.status === 'error') return '<span class="quota-error">失敗</span>';
       return escapeHtml(formatTime(usage.updated_at));
     }
 
     function renderQuota(account) {
       const usage = account.usage;
-      if (!usage) return '<span class="quota-muted">尚未查询</span>';
-      if (usage.status === 'loading') return '<span class="quota-muted">额度查询中...</span>';
-      if (usage.status === 'error') return '<span class="quota-error">获取失败：' + escapeHtml(usage.error || '请重试') + '</span>';
-      if (usage.status !== 'ready') return '<span class="quota-muted">尚未查询</span>';
+      if (!usage) return '<span class="quota-muted">尚未查詢</span>';
+      if (usage.status === 'loading') return '<span class="quota-muted">額度查詢中...</span>';
+      if (usage.status === 'error') return '<span class="quota-error">取得失敗：' + escapeHtml(usage.error || '請重試') + '</span>';
+      if (usage.status !== 'ready') return '<span class="quota-muted">尚未查詢</span>';
       const meter = (label, item = {}) => {
         const percent = percentValue(item.left);
         return '<div class="meter-row"><span class="meter-label">' + label + '</span><span class="meter-track"><span class="meter-fill" style="width:' + percent + '%"></span></span><strong class="meter-value">' + escapeHtml(item.left || '--') + '</strong></div>';
@@ -3088,10 +3088,10 @@
 
     function renderReset(account) {
       const usage = account.usage;
-      if (!usage) return '<span class="quota-muted">尚未查询</span>';
-      if (usage.status === 'loading') return '<span class="quota-muted">额度查询中...</span>';
-      if (usage.status === 'error') return '<span class="quota-error">暂不可用</span>';
-      if (usage.status !== 'ready') return '<span class="quota-muted">尚未查询</span>';
+      if (!usage) return '<span class="quota-muted">尚未查詢</span>';
+      if (usage.status === 'loading') return '<span class="quota-muted">額度查詢中...</span>';
+      if (usage.status === 'error') return '<span class="quota-error">暫不可用</span>';
+      if (usage.status !== 'ready') return '<span class="quota-muted">尚未查詢</span>';
       const meter = (label, item = {}) => {
         return '<div class="reset-row"><span class="meter-label">' + label + '</span><span class="reset-time">' + escapeHtml(formatResetTime(item.reset_at)) + '</span></div>';
       };
@@ -3111,57 +3111,57 @@
         selectAll.indeterminate = count > 0 && count < total;
       }
       const exportButton = $('#exportAccounts');
-      if (exportButton) exportButton.textContent = count ? `导出选中（${count}）` : '导出 JSON';
+      if (exportButton) exportButton.textContent = count ? `匯出選中（${count}）` : '匯出 JSON';
     }
 
     function renderAccounts() {
       state.selectedAccounts = new Set([...state.selectedAccounts].filter((id) => state.accounts.some((account) => String(account.id) === id)));
       const rows = state.accounts.map((account) => {
         const [label, tone] = accountState(account);
-        const actionLabel = account.enabled ? '禁用' : '启用';
+        const actionLabel = account.enabled ? '停用' : '啟用';
         const profile = account.profile || {};
-        const email = profile.email || '个人资料未同步';
-        const name = account.label || profile.nickname || profile.name || 'Hark 账号';
+        const email = profile.email || '個人資料未同步';
+        const name = account.label || profile.nickname || profile.name || 'Hark 帳號';
         const accountId = escapeHtml(account.id);
         const checked = state.selectedAccounts.has(String(account.id)) ? ' checked' : '';
         return '<tr>' +
-          '<td data-label="账号"><div class="account-main"><input class="account-select" type="checkbox" data-account-select="' + accountId + '" aria-label="选择 ' + escapeHtml(email) + '"' + checked + '><div><span class="account-email" title="' + escapeHtml(email) + '">' + escapeHtml(email) + '</span><span class="sub-cell">' + escapeHtml(name) + '</span></div></div></td>' +
-          '<td data-label="状态"><span class="badge ' + tone + '">' + label + '</span></td>' +
+          '<td data-label="帳號"><div class="account-main"><input class="account-select" type="checkbox" data-account-select="' + accountId + '" aria-label="選擇 ' + escapeHtml(email) + '"' + checked + '><div><span class="account-email" title="' + escapeHtml(email) + '">' + escapeHtml(email) + '</span><span class="sub-cell">' + escapeHtml(name) + '</span></div></div></td>' +
+          '<td data-label="狀態"><span class="badge ' + tone + '">' + label + '</span></td>' +
           '<td data-label="套餐" class="plan-cell">' + renderPlan(account) + '</td>' +
-          '<td data-label="额度" class="quota-cell">' + renderQuota(account) + '</td>' +
+          '<td data-label="額度" class="quota-cell">' + renderQuota(account) + '</td>' +
           '<td data-label="重置" class="reset-cell">' + renderReset(account) + '</td>' +
-          '<td data-label="更新时间" class="updated-cell">' + renderUpdatedAt(account) + '</td>' +
+          '<td data-label="更新時間" class="updated-cell">' + renderUpdatedAt(account) + '</td>' +
           '<td data-label="操作"><div class="row-actions">' +
             '<button class="button small" data-account-action="toggle" data-id="' + accountId + '">' + actionLabel + '</button>' +
-            '<button class="button small" data-account-action="edit" data-id="' + accountId + '">编辑</button>' +
-            '<button class="button danger small" data-account-action="delete" data-id="' + accountId + '">删除</button>' +
-            '<div class="more-wrap"><button class="button small more-trigger" type="button" data-more-trigger aria-haspopup="menu" aria-expanded="false" aria-label="更多账号操作">更多</button><div class="more-menu" role="menu">' +
-              '<button class="button small" type="button" role="menuitem" data-account-action="usage" data-id="' + accountId + '">刷新额度</button>' +
+            '<button class="button small" data-account-action="edit" data-id="' + accountId + '">編輯</button>' +
+            '<button class="button danger small" data-account-action="delete" data-id="' + accountId + '">刪除</button>' +
+            '<div class="more-wrap"><button class="button small more-trigger" type="button" data-more-trigger aria-haspopup="menu" aria-expanded="false" aria-label="更多帳號操作">更多</button><div class="more-menu" role="menu">' +
+              '<button class="button small" type="button" role="menuitem" data-account-action="usage" data-id="' + accountId + '">重新整理額度</button>' +
             '</div></div>' +
           '</div></td>' +
         '</tr>';
       }).join('');
       $('#accountTable').innerHTML = state.accounts.length
-        ? '<table><thead><tr><th class="account-head"><label><input id="selectAllAccounts" type="checkbox" aria-label="选择全部账号"><span>账号</span></label></th><th>状态</th><th>套餐</th><th>额度</th><th>重置</th><th>更新时间</th><th>操作</th></tr></thead><tbody>' + rows + '</tbody></table>'
-        : '<div class="empty">暂无账号。添加一个已登录的 Hark 账号。</div>';
+        ? '<table><thead><tr><th class="account-head"><label><input id="selectAllAccounts" type="checkbox" aria-label="選擇全部帳號"><span>帳號</span></label></th><th>狀態</th><th>套餐</th><th>額度</th><th>重置</th><th>更新時間</th><th>操作</th></tr></thead><tbody>' + rows + '</tbody></table>'
+        : '<div class="empty">暫無帳號。新增一個已登入的 Hark 帳號。</div>';
       renderAccountSelection();
     }
 
     function renderTasks() {
       const rows = state.tasks.map((task) => {
-        const phase = task.phase || (task.progress_known ? '进度 ' + task.progress + '%' : '进度未知');
+        const phase = task.phase || (task.progress_known ? '進度 ' + task.progress + '%' : '進度未知');
         return '<tr>' +
           '<td><span class="primary-cell mono">' + escapeHtml(task.id) + '</span><span class="sub-cell">' + formatTime(task.created_at) + '</span></td>' +
           '<td>' + statusBadge(task.status) + '</td>' +
           '<td><span class="primary-cell">' + escapeHtml(task.prompt || '') + '</span><span class="sub-cell">' + escapeHtml(phase) + '</span></td>' +
           '<td class="num">' + (task.elapsed == null ? '--' : task.elapsed + 's') + '</td>' +
           '<td>' + (task.error ? '<span class="sub-cell" title="' + escapeHtml(task.error) + '">' + escapeHtml(task.error).slice(0, 80) + '</span>' : '<span class="sub-cell">--</span>') + '</td>' +
-          '<td>' + (['completed', 'failed'].includes(task.status) ? '<button class="button danger small" data-task-action="delete" data-id="' + escapeHtml(task.id) + '">删除</button>' : '<span class="sub-cell">运行中</span>') + '</td>' +
+          '<td>' + (['completed', 'failed'].includes(task.status) ? '<button class="button danger small" data-task-action="delete" data-id="' + escapeHtml(task.id) + '">刪除</button>' : '<span class="sub-cell">執行中</span>') + '</td>' +
         '</tr>';
       }).join('');
       $('#taskTable').innerHTML = state.tasks.length
-        ? '<table><thead><tr><th>任务</th><th>状态</th><th>提示词</th><th>耗时</th><th>错误</th><th>操作</th></tr></thead><tbody>' + rows + '</tbody></table>'
-        : '<div class="empty">暂无任务。</div>';
+        ? '<table><thead><tr><th>任務</th><th>狀態</th><th>提示詞</th><th>耗時</th><th>錯誤</th><th>操作</th></tr></thead><tbody>' + rows + '</tbody></table>'
+        : '<div class="empty">暫無任務。</div>';
       setText('#metricTasks', state.tasks.length);
     }
 
@@ -3175,9 +3175,9 @@
       const ready = state.accounts.filter((account) => account.usage?.status === 'ready');
       const loading = state.accounts.some((account) => account.usage?.status === 'loading');
       const failed = state.accounts.some((account) => account.usage?.status === 'error');
-      if (loading) $('#workbenchQuota').textContent = '额度查询中...';
-      else if (ready.length) $('#workbenchQuota').textContent = '额度已更新，可在“账号”中查看每日和月度剩余。';
-      else if (failed) $('#workbenchQuota').textContent = '额度获取失败，可到“账号”中重试。';
+      if (loading) $('#workbenchQuota').textContent = '額度查詢中...';
+      else if (ready.length) $('#workbenchQuota').textContent = '額度已更新，可在“帳號”中檢視每日和月度剩餘。';
+      else if (failed) $('#workbenchQuota').textContent = '額度取得失敗，可到“帳號”中重試。';
       else $('#workbenchQuota').textContent = '';
     }
 
@@ -3198,7 +3198,7 @@
       clearNotice();
       await Promise.allSettled([loadStatus(), loadAccounts(), loadTasks(), loadMedia()]).then((results) => {
         const failed = results.find((result) => result.status === 'rejected');
-        if (failed) showNotice(failed.reason?.message || '部分数据读取失败，请检查 API Key。', 'error');
+        if (failed) showNotice(failed.reason?.message || '部分資料讀取失敗，請檢查 API Key。', 'error');
       });
     }
 
@@ -3225,13 +3225,13 @@
       const dialog = $('#accountDialog');
       dialog.dataset.mode = mode;
       dialog.dataset.id = account?.id || '';
-      $('#dialogTitle').textContent = mode === 'add' ? '添加账号' : (mode === 'edit' ? '编辑账号' : (mode === 'cookie' ? '更新 Cookie' : '修改标签'));
+      $('#dialogTitle').textContent = mode === 'add' ? '新增帳號' : (mode === 'edit' ? '編輯帳號' : (mode === 'cookie' ? '更新 Cookie' : '修改標籤'));
       $('#dialogLabelField').hidden = mode === 'cookie';
       $('#dialogCookieField').hidden = mode === 'label';
       $('#dialogLabel').value = account?.label || '';
       $('#dialogCookie').value = '';
       $('#dialogCookie').required = mode === 'add' || mode === 'cookie';
-      $('#dialogCookie').placeholder = mode === 'edit' ? '留空则保留当前 Cookie' : '粘贴完整 Cookie，或仅粘贴 session token';
+      $('#dialogCookie').placeholder = mode === 'edit' ? '留空則保留當前 Cookie' : '貼上完整 Cookie，或僅貼上 session token';
       if (!dialog.open) dialog.showModal();
     }
 
@@ -3257,11 +3257,11 @@
           const quotaFailed = saved?.usage?.status === 'error';
           const quotaLoading = saved?.usage?.status === 'loading';
           showNotice(
-            quotaFailed ? '账号已验证并添加，额度暂时获取失败，可稍后刷新。' : (quotaLoading ? '账号已验证并添加，额度正在获取。' : '账号已验证并添加，邮箱和额度已同步。'),
+            quotaFailed ? '帳號已驗證並新增，額度暫時取得失敗，可稍後重新整理。' : (quotaLoading ? '帳號已驗證並新增，額度正在取得。' : '帳號已驗證並新增，信箱和額度已同步。'),
             quotaFailed ? '' : 'success'
           );
         } else {
-          showNotice('账号信息已更新。', 'success');
+          showNotice('帳號資訊已更新。', 'success');
         }
         await loadAccounts();
         if (mode === 'add' && saved?.usage?.status === 'loading') {
@@ -3290,7 +3290,7 @@
         return;
       }
       if (!ids.length) return;
-      if (action === 'delete' && !window.confirm(`确认删除选中的 ${ids.length} 个账号？`)) return;
+      if (action === 'delete' && !window.confirm(`確認刪除選中的 ${ids.length} 個帳號？`)) return;
       const enabled = action === 'enable';
       let completed = 0;
       let failed = 0;
@@ -3306,7 +3306,7 @@
       state.selectedAccounts.clear();
       await loadAccounts();
       await loadStatus();
-      showNotice(failed ? `已完成 ${completed} 个，${failed} 个失败。` : `已完成 ${completed} 个账号的${action === 'delete' ? '删除' : enabled ? '启用' : '禁用'}。`, failed ? 'error' : 'success');
+      showNotice(failed ? `已完成 ${completed} 個，${failed} 個失敗。` : `已完成 ${completed} 個帳號的${action === 'delete' ? '刪除' : enabled ? '啟用' : '停用'}。`, failed ? 'error' : 'success');
     }
 
     async function exportAccountsJson() {
@@ -3319,7 +3319,7 @@
         const response = await fetch(`/admin/accounts/export${query}`, { headers });
         if (!response.ok) {
           const data = await response.json().catch(() => ({}));
-          throw new Error(data?.detail || `导出失败（HTTP ${response.status}）`);
+          throw new Error(data?.detail || `匯出失敗（HTTP ${response.status}）`);
         }
         const blob = await response.blob();
         const url = URL.createObjectURL(blob);
@@ -3328,7 +3328,7 @@
         link.download = `hark2api-node-accounts-${new Date().toISOString().slice(0, 10)}.json`;
         link.click();
         URL.revokeObjectURL(url);
-        showNotice(ids.length ? `已导出 ${ids.length} 个账号。文件包含 Cookie / ST，请妥善保管。` : '已导出全部账号。文件包含 Cookie / ST，请妥善保管。', 'success');
+        showNotice(ids.length ? `已匯出 ${ids.length} 個帳號。檔案包含 Cookie / ST，請妥善保管。` : '已匯出全部帳號。檔案包含 Cookie / ST，請妥善保管。', 'success');
       } catch (error) {
         showNotice(error.message, 'error');
       }
@@ -3341,12 +3341,12 @@
       try {
         const value = JSON.parse(await file.text());
         const entries = Array.isArray(value) ? value : value?.accounts;
-        if (!Array.isArray(entries) || !entries.length) throw new Error('JSON 中没有账号列表。');
-        if (entries.length > 100) throw new Error('单次最多导入 100 个账号。');
+        if (!Array.isArray(entries) || !entries.length) throw new Error('JSON 中沒有帳號列表。');
+        if (entries.length > 100) throw new Error('單次最多匯入 100 個帳號。');
         const normalized = entries.map((item, index) => {
-          if (!item || typeof item !== 'object') throw new Error(`第 ${index + 1} 条账号格式无效。`);
+          if (!item || typeof item !== 'object') throw new Error(`第 ${index + 1} 條帳號格式無效。`);
           const cookie = item.cookie_header || item.cookie || item.st;
-          if (typeof cookie !== 'string' || !cookie.trim()) throw new Error(`第 ${index + 1} 条账号缺少 Cookie / ST。`);
+          if (typeof cookie !== 'string' || !cookie.trim()) throw new Error(`第 ${index + 1} 條帳號缺少 Cookie / ST。`);
           return { label: String(item.label || ''), cookie_header: cookie.trim(), enabled: item.enabled !== false };
         });
         let completed = 0;
@@ -3354,7 +3354,7 @@
         let pendingQuota = false;
         const errors = [];
         for (let index = 0; index < normalized.length; index += 1) {
-          showNotice(`正在导入 ${index + 1}/${normalized.length}...`);
+          showNotice(`正在匯入 ${index + 1}/${normalized.length}...`);
           try {
             const saved = await api('/admin/accounts', { method: 'POST', body: { label: normalized[index].label, cookie_header: normalized[index].cookie_header } });
             if (normalized[index].enabled === false && saved.enabled) {
@@ -3372,7 +3372,7 @@
         await loadStatus();
         if (pendingQuota) waitForUsage().catch(() => {});
         const suffix = errors.length ? ` ${errors.join('；')}` : '';
-        showNotice(`导入完成：成功 ${completed} 个，失败 ${failed} 个。${suffix}`, failed ? 'error' : 'success');
+        showNotice(`匯入完成：成功 ${completed} 個，失敗 ${failed} 個。${suffix}`, failed ? 'error' : 'success');
       } catch (error) {
         showNotice(error.message, 'error');
       } finally {
@@ -3386,29 +3386,29 @@
       closeMoreMenus();
       try {
         if (action === 'test') {
-          showNotice(`正在测试 ${account.label || id}...`);
+          showNotice(`正在測試 ${account.label || id}...`);
           const result = await api(`/admin/accounts/${encodeURIComponent(id)}/test`, { method: 'POST' });
-          showNotice(result.ok ? '账号认证成功。' : `账号认证失败：${result.error || '未知错误'}`, result.ok ? 'success' : 'error');
+          showNotice(result.ok ? '帳號認證成功。' : `帳號認證失敗：${result.error || '未知錯誤'}`, result.ok ? 'success' : 'error');
           await loadAccounts();
           await loadStatus();
         }
         if (action === 'usage') {
-          showNotice('正在查询额度，请稍候...');
+          showNotice('正在查詢額度，請稍候...');
           await api('/admin/accounts/' + encodeURIComponent(id) + '/usage', { method: 'POST' });
-          showNotice('额度已更新。', 'success');
+          showNotice('額度已更新。', 'success');
           await loadAccounts();
         }
         if (action === 'edit') setDialogMode(action, account);
         if (action === 'toggle') {
           await api(`/admin/accounts/${encodeURIComponent(id)}`, { method: 'PATCH', body: { enabled: !account.enabled } });
-          showNotice(account.enabled ? '账号已禁用。' : '账号已启用。', 'success');
+          showNotice(account.enabled ? '帳號已停用。' : '帳號已啟用。', 'success');
           await loadAccounts();
           await loadStatus();
         }
         if (action === 'delete') {
-          if (!window.confirm(`确认删除账号“${account.label || id}”？`)) return;
+          if (!window.confirm(`確認刪除帳號“${account.label || id}”？`)) return;
           await api(`/admin/accounts/${encodeURIComponent(id)}`, { method: 'DELETE' });
-          showNotice('账号已删除。', 'success');
+          showNotice('帳號已刪除。', 'success');
           await loadAccounts();
           await loadStatus();
         }
@@ -3416,20 +3416,20 @@
     }
 
     async function taskAction(id) {
-      if (!window.confirm('确认删除这条任务记录？')) return;
-      try { await api(`/admin/tasks/${encodeURIComponent(id)}`, { method: 'DELETE' }); showNotice('任务记录已删除。', 'success'); await loadTasks(); }
+      if (!window.confirm('確認刪除這條任務記錄？')) return;
+      try { await api(`/admin/tasks/${encodeURIComponent(id)}`, { method: 'DELETE' }); showNotice('任務記錄已刪除。', 'success'); await loadTasks(); }
       catch (error) { showNotice(error.message, 'error'); }
     }
 
     async function clearTasks() {
-      if (!window.confirm('确认清理全部已结束任务？')) return;
-      try { const result = await api('/admin/tasks/clear', { method: 'POST', body: {} }); showNotice(`已清理 ${result.removed || 0} 条任务。`, 'success'); await loadTasks(); }
+      if (!window.confirm('確認清理全部已結束任務？')) return;
+      try { const result = await api('/admin/tasks/clear', { method: 'POST', body: {} }); showNotice(`已清理 ${result.removed || 0} 條任務。`, 'success'); await loadTasks(); }
       catch (error) { showNotice(error.message, 'error'); }
     }
 
     async function mediaAction(name) {
-      if (!window.confirm(`确认删除媒体文件“${name}”？`)) return;
-      try { await api(`/admin/media/${encodeURIComponent(name)}`, { method: 'DELETE' }); showNotice('媒体文件已删除。', 'success'); await loadMedia(); await loadStatus(); }
+      if (!window.confirm(`確認刪除媒體檔案“${name}”？`)) return;
+      try { await api(`/admin/media/${encodeURIComponent(name)}`, { method: 'DELETE' }); showNotice('媒體檔案已刪除。', 'success'); await loadMedia(); await loadStatus(); }
       catch (error) { showNotice(error.message, 'error'); }
     }
 
@@ -3438,8 +3438,8 @@
       const days = Number($('#cleanupAge').value);
       try {
         const result = await api('/admin/media/cleanup', { method: 'POST', body: { max_age_seconds: Math.max(1, days) * 86400, dry_run: $('#cleanupDryRun').checked } });
-        $('#cleanupResult').textContent = `${result.dry_run ? '预计' : '已'}处理 ${result.removed || 0} 个文件，${formatBytes(result.bytes_removed)}。`;
-        showNotice(result.dry_run ? '清理预览完成。' : '媒体清理完成。', 'success');
+        $('#cleanupResult').textContent = `${result.dry_run ? '預計' : '已'}處理 ${result.removed || 0} 個檔案，${formatBytes(result.bytes_removed)}。`;
+        showNotice(result.dry_run ? '清理預覽完成。' : '媒體清理完成。', 'success');
         if (!result.dry_run) { await loadMedia(); await loadStatus(); }
       } catch (error) { showNotice(error.message, 'error'); }
     }
@@ -3449,7 +3449,7 @@
     function setRunStatus(task) {
       const status = String(task.status || 'queued');
       const tone = status === 'completed' ? 'good' : (status === 'failed' ? 'bad' : 'warn');
-      const label = status === 'completed' ? '已完成' : (status === 'failed' ? '失败' : (task.phase || '处理中'));
+      const label = status === 'completed' ? '已完成' : (status === 'failed' ? '失敗' : (task.phase || '處理中'));
       const progress = task.progress_known && task.progress != null ? ' ' + task.progress + '%' : '';
       const element = $('#runStatus');
       element.className = 'badge ' + tone;
@@ -3462,16 +3462,16 @@
       result.className = 'result-status';
       if (task.status === 'failed') {
         actions.hidden = true;
-        result.innerHTML = '<span class="badge bad">失败</span><p class="result-copy">' + escapeHtml(task.error || '任务失败') + '</p>';
+        result.innerHTML = '<span class="badge bad">失敗</span><p class="result-copy">' + escapeHtml(task.error || '任務失敗') + '</p>';
         return;
       }
       const item = (task.data || [])[0];
       if (!item || !item.url) {
         actions.hidden = true;
-        result.textContent = '任务完成，但没有返回图片。';
+        result.textContent = '任務完成，但沒有返回圖片。';
         return;
       }
-      result.innerHTML = '<div class="result-image"><img src="' + escapeHtml(item.url) + '" alt="生成结果"></div><p class="result-copy"><a href="' + escapeHtml(item.url) + '" target="_blank" rel="noreferrer">打开原图</a></p>';
+      result.innerHTML = '<div class="result-image"><img src="' + escapeHtml(item.url) + '" alt="生成結果"></div><p class="result-copy"><a href="' + escapeHtml(item.url) + '" target="_blank" rel="noreferrer">開啟原圖</a></p>';
       actions.hidden = false;
     }
 
@@ -3496,7 +3496,7 @@
       }
       state.referenceUrl = URL.createObjectURL(file);
       preview.src = state.referenceUrl;
-      $('#referenceFileName').textContent = file.name || '参考图';
+      $('#referenceFileName').textContent = file.name || '參考圖';
       wrap.hidden = false;
       extract.disabled = false;
     }
@@ -3514,9 +3514,9 @@
         const data = await api('/admin/style-prompt', { method: 'POST', body });
         $('#stylePromptText').textContent = String(data.prompt || '').trim();
         $('#stylePromptBlock').hidden = !$('#stylePromptText').textContent;
-        if (!$('#stylePromptBlock').hidden) showNotice('风格提示已提取，可继续补充主体和场景。', 'success');
+        if (!$('#stylePromptBlock').hidden) showNotice('風格提示已提取，可繼續補充主體和場景。', 'success');
       } catch (error) {
-        showNotice(`风格提取失败：${error.message}`, 'error');
+        showNotice(`風格提取失敗：${error.message}`, 'error');
       } finally {
         button.innerHTML = original;
         button.disabled = !state.referenceFile;
@@ -3536,10 +3536,10 @@
         setRunStatus(task);
         if (task.status === 'completed' || task.status === 'failed') return task;
         $('#runResult').className = 'result-status empty-state';
-        $('#runResult').innerHTML = '<span class="progress-indicator" aria-hidden="true"></span><strong>' + escapeHtml(task.phase || '处理中') + '</strong>';
+        $('#runResult').innerHTML = '<span class="progress-indicator" aria-hidden="true"></span><strong>' + escapeHtml(task.phase || '處理中') + '</strong>';
         await wait(1200);
       }
-      throw new Error('任务等待超时，请到“任务”页查看状态。');
+      throw new Error('任務等待超時，請到“任務”頁檢視狀態。');
     }
 
     async function waitForUsage() {
@@ -3557,14 +3557,14 @@
       const prompt = combinedPrompt();
       const file = state.referenceFile;
       if (!$('#generationPrompt').value.trim()) {
-        showNotice('请先描述想生成的主体或场景。', 'error');
+        showNotice('請先描述想生成的主體或場景。', 'error');
         return;
       }
       button.disabled = true;
       $('#runActions').hidden = true;
       $('#workbenchQuota').textContent = '';
       $('#runResult').className = 'result-status empty-state';
-      $('#runResult').textContent = '正在提交任务...';
+      $('#runResult').textContent = '正在提交任務...';
       try {
         let task;
         if (file) {
@@ -3586,7 +3586,7 @@
         $('#runResult').className = 'result-status empty-state';
         $('#runResult').textContent = error.message;
         $('#runStatus').className = 'badge bad';
-        $('#runStatus').textContent = '失败';
+        $('#runStatus').textContent = '失敗';
         showNotice(error.message, 'error');
       } finally {
         button.disabled = false;
@@ -3594,7 +3594,7 @@
     }
 
     $('#apiKey').value = getKey();
-    $('#saveKey').addEventListener('click', async () => { setKey($('#apiKey').value.trim()); showNotice(getKey() ? 'API Key 已保存到当前浏览器会话。' : 'API Key 已清除。', 'success'); await refreshAll(); });
+    $('#saveKey').addEventListener('click', async () => { setKey($('#apiKey').value.trim()); showNotice(getKey() ? 'API Key 已儲存到目前瀏覽器工作階段。' : 'API Key 已清除。', 'success'); await refreshAll(); });
     $('#closeNotice').addEventListener('click', clearNotice);
     $('#refreshAll').addEventListener('click', refreshAll);
     $('#refreshAccounts').addEventListener('click', () => refreshSection('accounts'));
@@ -3631,7 +3631,7 @@
       const file = event.dataTransfer.files[0];
       if (!file) return;
       if (!file.type.startsWith('image/')) {
-        showNotice('只能添加图片作为参考图。', 'error');
+        showNotice('只能新增圖片作為參考圖。', 'error');
         return;
       }
       renderReferenceFile(file);

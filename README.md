@@ -112,8 +112,8 @@ npx wrangler deploy
 | `HARK2API_SETTLE_SECONDS` | `1.5` | 完成訊號後的靜默期（秒），避免取得不完整訊息 |
 | `HARK2API_TASK_QUEUE_LIMIT` | `8` | 同時排隊的任務上限 |
 | `HARK2API_MAX_MEDIA_BYTES` | `20971520` | 參考圖上傳上限（20 MB） |
-| `HARK2API_TIMEZONE` | `Asia/Shanghai` | 額度週期換算時區 |
-| `HARK2API_LOCALE` | `zh-CN` | 上游請求語系 |
+| `HARK2API_TIMEZONE` | `Asia/Taipei` | 額度週期換算時區 |
+| `HARK2API_LOCALE` | `zh-TW` | 上游請求語系 |
 | `HARK2API_USER_AGENT` | 桌面版 Chrome | 上游請求 User-Agent |
 | `HARK2API_PUBLIC_BASE` | 空 | 回傳 URL 使用的對外網域；未設定時採用請求 Host |
 
